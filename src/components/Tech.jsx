@@ -1,13 +1,13 @@
 import React from 'react'
-import { SiReact, SiNodedotjs, SiPython, SiTensorflow, SiOpenai } from 'react-icons/si'
+import { SiReact, SiNodedotjs, SiPython, SiVercel, SiSupabase } from 'react-icons/si'
 import { motion } from 'framer-motion'
 
 const tech = [
-  {icon:<SiReact size={28} className="text-neon"/>, name:'React'},
-  {icon:<SiNodedotjs size={28} className="text-neon"/>, name:'Node.js'},
-  {icon:<SiPython size={28} className="text-neon"/>, name:'Python'},
-  {icon:<SiTensorflow size={28} className="text-neon"/>, name:'TensorFlow'},
-  {icon:<SiOpenai size={28} className="text-neon"/>, name:'LangChain'},
+  {icon:<SiReact size={28} className="text-neon"/>, name:'REACT'},
+  {icon:<SiNodedotjs size={28} className="text-neon"/>, name:'NODE'},
+  {icon:<SiSupabase size={28} className="text-neon"/>, name:'SUPABASE'},
+  {icon:<SiVercel size={28} className="text-neon"/>, name:'VERCEL'},
+  {icon:<SiPython size={28} className="text-neon"/>, name:'PYTHON'},
 ]
 
 export default function Tech(){
