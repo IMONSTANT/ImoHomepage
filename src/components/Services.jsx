@@ -11,7 +11,7 @@ const services = [
 
 export default function Services(){
   return (
-    <section id="services" className="py-20">
+    <section id="services" className="py-20" >
       <div className="max-w-6xl mx-auto">
         <motion.h2 className="text-3xl font-bold" initial={{y:10, opacity:0}} whileInView={{y:0, opacity:1}} viewport={{once:true}}>Serviços</motion.h2>
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

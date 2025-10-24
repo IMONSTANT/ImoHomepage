@@ -7,7 +7,7 @@ export default function Typer(){
   const [forward, setForward] = React.useState(true)
 
   // Slower typing effect with a pause when a word finishes
-  const typingSpeed = 120 // ms per char (typing)
+  const typingSpeed = 170 // ms per char (typing)
   const deletingSpeed = 70 // ms per char (deleting)
   const pauseAfterWord = 1400 // ms pause after full word
 
