@@ -14,6 +14,9 @@ export default function Services(){
     <section id="services" className="py-20" >
       <div className="max-w-6xl mx-auto">
         <motion.h2 className="text-3xl font-bold" initial={{y:10, opacity:0}} whileInView={{y:0, opacity:1}} viewport={{once:true}}>Serviços</motion.h2>
+        <motion.p className="mt-4 text-gray-300 max-w-3xl" initial={{y:10, opacity:0}} whileInView={{y:0, opacity:1}} viewport={{once:true}}>
+          Criamos soluções completas para diferentes setores — com destaque para imobiliárias, softwares de gestão e escritórios de advocacia. Oferecemos desde landing pages personalizadas até plataformas escaláveis com agentes de IA integrados.
+        </motion.p>
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((s, i)=> (
             <motion.div key={s.title} className="p-6 rounded-xl card-neon hover:shadow-[0_0_24px_rgba(0,255,255,0.04)] transition" whileHover={{y:-6}} initial={{opacity:0, y:10}} whileInView={{opacity:1, y:0}} viewport={{once:true}} transition={{delay:i*0.08}}>
