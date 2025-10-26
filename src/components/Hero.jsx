@@ -113,9 +113,9 @@ export default function Hero(){
             <span className="block"><Typer/></span>
             <span className="block text-white">Soluções que <span className="text-neon">Pensem com Você</span>.</span>
           </h1>
-
-          <p className="mt-6 text-gray-300 max-w-xl">Somos um grupo de alunos apaixonados por tecnologia. Criamos agentes de IA e sistemas inteligentes personalizados para automatizar processos, aumentar produtividade e resolver problemas específicos das empresas.</p>
-
+            <p className="mt-6 text-gray-300 max-w-xl">
+            Somos uma equipe apaixonada por tecnologia, especializada no desenvolvimento de agentes de IA e sistemas inteligentes personalizados para automatizar processos, impulsionar a produtividade e resolver desafios específicos das empresas.
+            </p>
           <div className="mt-8 flex gap-4">
             <a href="#contact" className="px-6 py-3 rounded-md bg-neon text-black font-semibold hover:scale-[1.02] transition-transform">Fale com a Imonstant</a>
             <a href="#services" className="px-6 py-3 rounded-md border border-neutral-700 hover:border-neon transition">Nossos Serviços</a>
