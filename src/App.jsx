@@ -1,11 +1,13 @@
 import React from 'react'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
+import HeroSection from './components/HeroSection'
 import About from './components/About'
-import Services from './components/Services'
-import Tech from './components/Tech'
-import Contact from './components/Contact'
+import Solutions from './components/Solutions'
+import ImoManagerSection from './components/ImoManagerSection'
+import TechAccordion from './components/TechAccordion'
+import ContactForm from './components/ContactForm'
 import Footer from './components/Footer'
+import WhatsAppButton from './components/WhatsAppButton'
 import ParticlesBackground from './components/ParticlesBackground'
 
 export default function App(){
@@ -14,13 +16,15 @@ export default function App(){
       <ParticlesBackground />
       <Navbar />
       <main className="px-6 md:px-16 lg:px-28">
-        <Hero />
+        <HeroSection />
         <About />
-        <Services />
-        <Tech />
-        <Contact />
+        <Solutions />
+        <ImoManagerSection />
+        <TechAccordion />
+        <ContactForm />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   )
 }

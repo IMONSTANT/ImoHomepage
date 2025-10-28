@@ -1,19 +1,45 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.1
+    }
+  }
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.6, ease: 'easeOut' }
+  }
+}
+
 export default function About(){
   return (
-    <section id="about" className="py-20  mt-32">
-      <div className="max-w-6xl mx-auto">
-        <motion.h2 className="text-3xl font-bold" initial={{y:10, opacity:0}} whileInView={{y:0, opacity:1}} viewport={{once:true}}>Sobre Nós</motion.h2>
-        <motion.p className="mt-6 text-gray-300 max-w-3xl" initial={{y:10, opacity:0}} whileInView={{y:0, opacity:1}} viewport={{once:true}}>
-          A Imonstant nasceu como um coletivo de estudantes apaixonados por tecnologia e IA. Criamos soluções inteligentes sob medida para empresas — com foco em resultados práticos, engenharia responsável e escalabilidade.
-          
-          Atuamos especialmente em setores onde automação e dados fazem diferença: imobiliárias (gestão de leads, triagem automática, recomendações), softwares de gestão empresarial, e escritórios de advocacia (sistemas advocativos com workflows automatizados). Além disso, desenvolvemos landing pages personalizadas e plataformas escaláveis que integram agentes de IA para otimizar processos e reduzir custos.
-          
-          Priorizamos prototipagem rápida, testes automatizados e integração contínua para entregar valor concreto e facilitar a evolução das soluções ao longo do tempo.
+    <section id="about" className="py-20 mt-32">
+      <motion.div
+        className="max-w-6xl mx-auto"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <motion.h2 variants={itemVariants} className="text-3xl font-bold">Sobre a Imonstant</motion.h2>
+        <motion.p variants={itemVariants} className="mt-6 text-gray-300 max-w-3xl">
+          A Imonstant transforma desafios empresariais em soluções digitais inteligentes. Somos uma equipe de engenheiros e cientistas de dados focada em construir produtos que automatizam processos, melhoram a tomada de decisão e liberam tempo para o que importa: crescimento do negócio.
+
+          Trabalhamos com empresas dos setores imobiliário, gestão empresarial e jurídico para entregar sistemas que realmente geram valor: pipelines de automação, agentes conversacionais integrados e dashboards acionáveis.
+
+          Nossa abordagem combina entrega rápida de protótipos, engenharia responsável e operação segura para garantir ROI claro e escalabilidade técnica.
         </motion.p>
-      </div>
+      </motion.div>
     </section>
   )
 }

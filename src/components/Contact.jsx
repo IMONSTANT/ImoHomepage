@@ -2,8 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { FaLinkedin, FaInstagram } from 'react-icons/fa'
 import toast, { Toaster } from 'react-hot-toast'
-
-const SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxPSSiJOVAZlgBgMvOc90k5oPVlNmegTpBf_wCIN03phExgAqFaUDqZ5xrWXKJbACGy9w/exec'
+import { SHEET_ENDPOINT, SOCIALS } from '../config'
 
 export default function Contact() {
   const [form, setForm] = React.useState({ name: '', email: '', message: '' })
@@ -81,7 +80,7 @@ export default function Contact() {
           </p>
           <div className="mt-8 flex gap-4 items-center">
             <a
-              href="https://www.instagram.com/tech.imonstant"
+              href={SOCIALS.instagram}
               target="_blank"
               rel="noreferrer"
               className="text-gray-300 hover:text-neon"
@@ -89,7 +88,7 @@ export default function Contact() {
               <FaInstagram size={22} />
             </a>
             <a
-              href="https://www.linkedin.com/in/imonstant/"
+              href={SOCIALS.linkedin}
               target="_blank"
               rel="noreferrer"
               className="text-gray-300 hover:text-neon"
