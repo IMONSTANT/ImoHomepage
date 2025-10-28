@@ -1,13 +1,12 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import img1 from '../assets/maneger-carrolsel1.png'
+import img2 from '../assets/maneger-carroelse2.png'
+import img3 from '../assets/maneger-carrolse3.png'
+import img4 from '../assets/maneger-carrol-4.png'
+import img5 from '../assets/menager-carrolsel5.png'
 
-const images = [
-  '/src/assets/maneger-carrolsel1.png',
-  '/src/assets/maneger-carroelse2.png',
-  '/src/assets/maneger-carrolse3.png',
-  '/src/assets/maneger-carrol-4.png',
-  '/src/assets/menager-carrolsel5.png'
-]
+const images = [img1, img2, img3, img4, img5]
 
 export default function ImageCarousel({ onOpenModal }) {
   const [current, setCurrent] = React.useState(0)
@@ -42,7 +41,7 @@ export default function ImageCarousel({ onOpenModal }) {
       className="relative w-full h-48 md:h-64 lg:h-80 rounded-xl overflow-hidden card-neon bg-black group cursor-pointer"
       onClick={onOpenModal}
     >
-      {/* Thumbnail image */}
+      {/* Thumbnail image (imported so Vite bundles correctly) */}
       <motion.img
         src={images[current]}
         alt={`ImoManager preview ${current + 1}`}

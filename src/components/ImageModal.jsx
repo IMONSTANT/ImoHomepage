@@ -1,13 +1,12 @@
 import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import img1 from '../assets/maneger-carrolsel1.png'
+import img2 from '../assets/maneger-carroelse2.png'
+import img3 from '../assets/maneger-carrolse3.png'
+import img4 from '../assets/maneger-carrol-4.png'
+import img5 from '../assets/menager-carrolsel5.png'
 
-const images = [
-  '/src/assets/maneger-carrolsel1.png',
-  '/src/assets/maneger-carroelse2.png',
-  '/src/assets/maneger-carrolse3.png',
-  '/src/assets/maneger-carrol-4.png',
-  '/src/assets/menager-carrolsel5.png'
-]
+const images = [img1, img2, img3, img4, img5]
 
 export default function ImageModal({ isOpen, onClose }) {
   const [current, setCurrent] = React.useState(0)
