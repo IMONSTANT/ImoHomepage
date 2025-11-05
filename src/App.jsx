@@ -15,7 +15,7 @@ export default function App(){
     <div className="min-h-screen relative overflow-x-hidden">
       <ParticlesBackground />
       <Navbar />
-      <main className="px-6 md:px-16 lg:px-28">
+      <main className="px-4 sm:px-6 md:px-16 lg:px-28">
         <HeroSection />
         <About />
         <Solutions />

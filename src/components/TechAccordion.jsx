@@ -52,7 +52,7 @@ export default function TechAccordion() {
   const [expanded, setExpanded] = React.useState(0)
 
   return (
-    <section id="tech" className="py-20">
+    <section id="tech" className="py-16 sm:py-20">
       <motion.div
         className="max-w-4xl mx-auto"
         variants={containerVariants}
@@ -64,12 +64,12 @@ export default function TechAccordion() {
           initial={{ opacity: 0, y: -10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl font-bold mb-8"
+          className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8"
         >
           Stack de Tecnologia
         </motion.h2>
 
-        <div className="space-y-3">
+        <div className="space-y-2 sm:space-y-3">
           {techStack.map((category, idx) => (
             <motion.div
               key={idx}
@@ -79,13 +79,13 @@ export default function TechAccordion() {
               <motion.button
                 onClick={() => setExpanded(expanded === idx ? -1 : idx)}
                 whileHover={{ backgroundColor: 'rgba(0, 255, 204, 0.05)' }}
-                className="w-full p-4 flex items-center justify-between text-left transition-colors"
+                className="w-full p-3 sm:p-4 flex items-center justify-between text-left transition-colors"
               >
-                <span className="font-semibold text-lg">{category.category}</span>
+                <span className="font-semibold text-base sm:text-lg">{category.category}</span>
                 <motion.div
                   animate={{ rotate: expanded === idx ? 180 : 0 }}
                   transition={{ duration: 0.3 }}
-                  className="text-neon text-xl"
+                  className="text-neon text-lg sm:text-xl"
                 >
                   ▼
                 </motion.div>
@@ -100,7 +100,7 @@ export default function TechAccordion() {
                 transition={{ duration: 0.3, ease: 'easeInOut' }}
                 className="overflow-hidden"
               >
-                <motion.div className="p-4 bg-black/20 border-t border-neutral-700 space-y-3">
+                <motion.div className="p-3 sm:p-4 bg-black/20 border-t border-neutral-700 space-y-2 sm:space-y-3">
                   {category.items.map((tech, i) => {
                     const IconComponent = tech.icon
                     return (
@@ -109,15 +109,15 @@ export default function TechAccordion() {
                         variants={itemVariants}
                         initial="hidden"
                         animate={expanded === idx ? 'visible' : 'hidden'}
-                        className="flex items-center gap-3 p-2 rounded-md hover:bg-neutral-800/50 transition-colors"
+                        className="flex items-center gap-2 sm:gap-3 p-2 rounded-md hover:bg-neutral-800/50 transition-colors"
                       >
                         <motion.div
                           whileHover={{ scale: 1.15, rotate: 5 }}
                           className="flex-shrink-0"
                         >
-                          <IconComponent size={24} style={{ color: tech.color }} />
+                          <IconComponent size={20} className="sm:w-6 sm:h-6" style={{ color: tech.color }} />
                         </motion.div>
-                        <span className="text-gray-300">{tech.name}</span>
+                        <span className="text-gray-300 text-sm sm:text-base">{tech.name}</span>
                       </motion.div>
                     )
                   })}
@@ -132,7 +132,7 @@ export default function TechAccordion() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
-          className="mt-8 text-gray-400 text-sm text-center"
+          className="mt-6 sm:mt-8 text-gray-400 text-xs sm:text-sm text-center"
         >
           Tecnologias modernas para soluções escaláveis e performáticas
         </motion.p>

@@ -53,25 +53,25 @@ export default function ContactForm(){
   }
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="py-16 sm:py-20">
       <Toaster position="bottom-center" />
       <motion.div
-        className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8"
+        className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
       >
         <motion.div variants={itemVariants}>
-          <h3 className="text-2xl font-bold">Vamos conversar</h3>
-          <p className="mt-4 text-gray-300">Agende uma demonstração ou nos conte sobre seu projeto. Criamos soluções de IA e automação alinhadas aos objetivos do seu negócio.</p>
-          <motion.div variants={itemVariants} className="mt-6 flex gap-4 items-center">
+          <h3 className="text-xl sm:text-2xl font-bold">Vamos conversar</h3>
+          <p className="mt-4 text-sm sm:text-base text-gray-300">Agende uma demonstração ou nos conte sobre seu projeto. Criamos soluções de IA e automação alinhadas aos objetivos do seu negócio.</p>
+          <motion.div variants={itemVariants} className="mt-6 flex flex-wrap gap-3 sm:gap-4 items-center">
             <motion.a
               href={SOCIALS.instagram}
               target="_blank"
               rel="noreferrer"
               whileHover={{ scale: 1.1, color: '#00ffcc' }}
-              className="text-gray-300"
+              className="text-gray-300 text-sm sm:text-base"
             >
               Instagram
             </motion.a>
@@ -80,7 +80,7 @@ export default function ContactForm(){
               target="_blank"
               rel="noreferrer"
               whileHover={{ scale: 1.1, color: '#00ffcc' }}
-              className="text-gray-300"
+              className="text-gray-300 text-sm sm:text-base"
             >
               LinkedIn
             </motion.a>
@@ -90,16 +90,16 @@ export default function ContactForm(){
         <motion.form
           onSubmit={handleSubmit}
           variants={itemVariants}
-          className="p-6 card-neon rounded-xl"
+          className="p-4 sm:p-6 card-neon rounded-xl"
         >
-          <div className="grid grid-cols-1 gap-4">
+          <div className="grid grid-cols-1 gap-3 sm:gap-4">
             <motion.input
               name="name"
               value={form.name}
               onChange={handleChange}
               placeholder="Nome"
               required
-              className="p-3 rounded-md bg-transparent border border-neutral-700 focus:outline-none"
+              className="p-2.5 sm:p-3 rounded-md bg-transparent border border-neutral-700 focus:outline-none text-sm sm:text-base"
               disabled={loading}
               whileFocus="focus"
               variants={inputVariants}
@@ -111,7 +111,7 @@ export default function ContactForm(){
               placeholder="Email"
               type="email"
               required
-              className="p-3 rounded-md bg-transparent border border-neutral-700 focus:outline-none"
+              className="p-2.5 sm:p-3 rounded-md bg-transparent border border-neutral-700 focus:outline-none text-sm sm:text-base"
               disabled={loading}
               whileFocus="focus"
               variants={inputVariants}
@@ -123,7 +123,7 @@ export default function ContactForm(){
               placeholder="Mensagem"
               rows={5}
               required
-              className="p-3 rounded-md bg-transparent border border-neutral-700 focus:outline-none"
+              className="p-2.5 sm:p-3 rounded-md bg-transparent border border-neutral-700 focus:outline-none text-sm sm:text-base"
               disabled={loading}
               whileFocus="focus"
               variants={inputVariants}
@@ -133,7 +133,7 @@ export default function ContactForm(){
               whileHover={{ scale: 1.02 }}
               type="submit"
               disabled={loading}
-              className="px-4 py-3 rounded-md bg-neon text-black font-semibold disabled:opacity-50"
+              className="px-4 py-2.5 sm:py-3 rounded-md bg-neon text-black font-semibold disabled:opacity-50 text-sm sm:text-base"
             >
               {loading ? 'Enviando...' : 'Enviar'}
             </motion.button>

@@ -27,18 +27,18 @@ export default function ImoManagerSection(){
   const [isModalOpen, setIsModalOpen] = React.useState(false)
 
   return (
-    <section id="imomanager" className="py-20">
+    <section id="imomanager" className="py-16 sm:py-20">
       <motion.div
-        className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+        className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
       >
         <motion.div variants={itemVariants}>
-          <h3 className="text-2xl font-bold">ImoManager — Gestão Inteligente para Imobiliárias</h3>
-          <p className="mt-4 text-gray-300">ImoManager integra contratos, anúncios, Automatize tarefas operacionais e concentre esforços no crescimento do negócio.</p>
-          <ul className="mt-4 text-gray-300 list-disc pl-5 space-y-2">
+          <h3 className="text-xl sm:text-2xl font-bold">ImoManager — Gestão Inteligente para Imobiliárias</h3>
+          <p className="mt-4 text-sm sm:text-base text-gray-300">ImoManager integra contratos, anúncios, Automatize tarefas operacionais e concentre esforços no crescimento do negócio.</p>
+          <ul className="mt-4 text-sm sm:text-base text-gray-300 list-disc pl-5 space-y-2">
             <li>Automação de contratos e renovação</li>
             <li>Gestão de imóveis e portfólios</li>
             <li>Notificações e comunicação integrada com clientes</li>
@@ -48,7 +48,7 @@ export default function ImoManagerSection(){
               href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-block px-5 py-3 bg-neon text-black rounded-md font-semibold"
+              className="inline-block px-4 sm:px-5 py-2.5 sm:py-3 bg-neon text-black rounded-md font-semibold text-sm sm:text-base"
             >
               Solicitar Demonstração
             </motion.a>
