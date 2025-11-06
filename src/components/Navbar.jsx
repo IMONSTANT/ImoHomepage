@@ -19,26 +19,7 @@ export default function Navbar(){
           ))}
           <a href="#contact" className="ml-4 px-3 lg:px-4 py-2 rounded-md bg-neon/10 text-neon border border-neon/20 hover:bg-neon/20 transition text-sm lg:text-base whitespace-nowrap">Fale Conosco</a>
         </nav>
-        <MobileMenu />
       </div>
     </motion.header>
-  )
-}
-
-function MobileMenu(){
-  const [open, setOpen] = React.useState(false)
-  return (
-    <div className="md:hidden">
-      <button onClick={()=>setOpen(!open)} className="p-2 rounded-md border border-transparent hover:border-neon/20">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="#9CA3AF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-      </button>
-      {open && (
-        <div className="absolute right-4 top-14 sm:top-16 w-48 p-4 card-neon rounded-lg shadow-lg">
-          {['Home','Sobre','Serviços','Contato'].map(label=> (
-            <a key={label} href={`#${label.toLowerCase()}`} className="block py-2 text-sm hover:text-neon transition-colors" onClick={()=>setOpen(false)}>{label}</a>
-          ))}
-        </div>
-      )}
-    </div>
   )
 }
