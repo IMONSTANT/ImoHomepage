@@ -41,7 +41,7 @@ export default function WhatsAppButton() {
 
   return (
     <motion.div
-      className="fixed bottom-8 right-8 z-30 flex items-center gap-3"
+      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 z-30 flex items-center gap-2 sm:gap-3"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.5, duration: 0.4 }}
@@ -55,7 +55,7 @@ export default function WhatsAppButton() {
           initial="hidden"
           animate="visible"
           exit="exit"
-          className="px-3 py-2 bg-neon text-black text-sm font-semibold rounded-lg whitespace-nowrap"
+          className="hidden sm:block px-3 py-2 bg-neon text-black text-xs sm:text-sm font-semibold rounded-lg whitespace-nowrap"
         >
           Fale conosco no WhatsApp
         </motion.div>
@@ -72,7 +72,7 @@ export default function WhatsAppButton() {
         whileTap={{ scale: 0.95 }}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className="relative flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-green-400 to-green-600 shadow-lg text-white"
+        className="relative flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-green-400 to-green-600 shadow-lg text-white"
         aria-label="Abrir WhatsApp"
       >
         {/* Pulse background */}
@@ -85,7 +85,7 @@ export default function WhatsAppButton() {
 
         {/* Icon */}
         <motion.div className="relative z-10">
-          <FaWhatsapp size={24} />
+          <FaWhatsapp size={20} className="sm:w-6 sm:h-6" />
         </motion.div>
       </motion.a>
     </motion.div>

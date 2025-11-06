@@ -29,27 +29,27 @@ const linkVariants = {
 export default function Footer(){
   return (
     <motion.footer
-      className="mt-12 py-8 border-t border-neutral-800"
+      className="mt-12 py-6 sm:py-8 px-4 sm:px-6 md:px-16 lg:px-28 border-t border-neutral-800"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
     >
       <motion.div
-        className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4"
+        className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <motion.div variants={itemVariants} className="text-sm text-gray-400">© 2025 Imonstant. Todos os direitos reservados.</motion.div>
-        <motion.div variants={containerVariants} className="flex gap-4">
+        <motion.div variants={itemVariants} className="text-xs sm:text-sm text-gray-400">© 2025 Imonstant. Todos os direitos reservados.</motion.div>
+        <motion.div variants={containerVariants} className="flex flex-wrap gap-3 sm:gap-4 justify-center">
           <motion.a
             href="#home"
             variants={linkVariants}
             initial="rest"
             whileHover="hover"
-            className="text-gray-400"
+            className="text-gray-400 text-xs sm:text-sm"
           >
             Home
           </motion.a>
@@ -58,7 +58,7 @@ export default function Footer(){
             variants={linkVariants}
             initial="rest"
             whileHover="hover"
-            className="text-gray-400"
+            className="text-gray-400 text-xs sm:text-sm"
           >
             Sobre
           </motion.a>
@@ -67,7 +67,7 @@ export default function Footer(){
             variants={linkVariants}
             initial="rest"
             whileHover="hover"
-            className="text-gray-400"
+            className="text-gray-400 text-xs sm:text-sm"
           >
             Soluções
           </motion.a>
@@ -76,7 +76,7 @@ export default function Footer(){
             variants={linkVariants}
             initial="rest"
             whileHover="hover"
-            className="text-gray-400"
+            className="text-gray-400 text-xs sm:text-sm"
           >
             Contato
           </motion.a>

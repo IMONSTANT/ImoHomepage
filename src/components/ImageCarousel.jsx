@@ -38,7 +38,7 @@ export default function ImageCarousel({ onOpenModal }) {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="relative w-full h-48 md:h-64 lg:h-80 rounded-xl overflow-hidden card-neon bg-black group cursor-pointer"
+      className="relative w-full h-40 sm:h-48 md:h-64 lg:h-80 rounded-xl overflow-hidden card-neon bg-black group cursor-pointer"
       onClick={onOpenModal}
     >
       {/* Thumbnail image (imported so Vite bundles correctly) */}
@@ -60,15 +60,15 @@ export default function ImageCarousel({ onOpenModal }) {
         <motion.div
           animate={{ scale: [1, 1.1, 1] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="text-neon font-semibold text-lg flex flex-col items-center gap-2"
+          className="text-neon font-semibold text-sm sm:text-base md:text-lg flex flex-col items-center gap-2"
         >
-          <div className="text-3xl">👁️</div>
-          <div>Clique para visualizar</div>
+          <div className="text-2xl sm:text-3xl">👁️</div>
+          <div className="px-4">Clique para visualizar</div>
         </motion.div>
       </motion.div>
 
       {/* Navigation dots */}
-      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+      <div className="absolute bottom-2 sm:bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 sm:gap-2 z-10">
         {images.map((_, i) => (
           <motion.button
             key={i}
@@ -86,7 +86,7 @@ export default function ImageCarousel({ onOpenModal }) {
       </div>
 
       {/* Counter badge */}
-      <div className="absolute top-3 right-3 z-10 px-2 py-1 rounded-full bg-black/50 text-neon text-xs font-semibold">
+      <div className="absolute top-2 right-2 sm:top-3 sm:right-3 z-10 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full bg-black/50 text-neon text-xs font-semibold">
         {current + 1} / {images.length}
       </div>
     </motion.div>

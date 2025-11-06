@@ -38,7 +38,7 @@ const cardVariants = {
 
 export default function Solutions(){
   return (
-    <section id="solutions" className="py-20">
+    <section id="solutions" className="py-16 sm:py-20">
       <motion.div
         className="max-w-6xl mx-auto"
         variants={containerVariants}
@@ -46,9 +46,9 @@ export default function Solutions(){
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <motion.h2 variants={itemVariants} className="text-3xl font-bold">Nossas Soluções</motion.h2>
+        <motion.h2 variants={itemVariants} className="text-2xl sm:text-3xl font-bold">Nossas Soluções</motion.h2>
         <motion.div
-          className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6"
+          className="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6"
           variants={containerVariants}
         >
           {solutions.map((s,i)=> (
@@ -58,16 +58,16 @@ export default function Solutions(){
               whileHover="hover"
               initial="rest"
               animate="rest"
-              className="p-6 card-neon rounded-xl cursor-pointer"
+              className="p-4 sm:p-6 card-neon rounded-xl cursor-pointer"
             >
               <motion.div variants={cardVariants} className="h-full flex flex-col">
-                <h4 className="font-semibold text-lg">{s.title}</h4>
-                <p className="mt-3 text-gray-300 text-sm flex-grow">{s.desc}</p>
-                <div className="mt-4">
+                <h4 className="font-semibold text-base sm:text-lg">{s.title}</h4>
+                <p className="mt-3 text-gray-300 text-xs sm:text-sm flex-grow">{s.desc}</p>
+                <div className="mt-3 sm:mt-4">
                   <motion.a
                     href="#contact"
                     whileHover={{ x: 4 }}
-                    className="text-sm text-neon hover:underline inline-block"
+                    className="text-xs sm:text-sm text-neon hover:underline inline-block"
                   >
                     Saiba mais →
                   </motion.a>

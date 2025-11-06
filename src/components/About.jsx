@@ -23,7 +23,7 @@ const itemVariants = {
 
 export default function About(){
   return (
-    <section id="about" className="py-20 mt-32">
+    <section id="about" className="py-16 sm:py-20 mt-16 sm:mt-24 md:mt-32">
       <motion.div
         className="max-w-6xl mx-auto"
         variants={containerVariants}
@@ -31,8 +31,8 @@ export default function About(){
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <motion.h2 variants={itemVariants} className="text-3xl font-bold">Sobre a Imonstant</motion.h2>
-        <motion.p variants={itemVariants} className="mt-6 text-gray-300 max-w-3xl">
+        <motion.h2 variants={itemVariants} className="text-2xl sm:text-3xl font-bold">Sobre a Imonstant</motion.h2>
+        <motion.p variants={itemVariants} className="mt-4 sm:mt-6 text-sm sm:text-base text-gray-300 max-w-3xl">
           A Imonstant transforma desafios empresariais em soluções digitais inteligentes. Somos uma equipe de engenheiros e cientistas de dados focada em construir produtos que automatizam processos, melhoram a tomada de decisão e liberam tempo para o que importa: crescimento do negócio.
 
           Trabalhamos com empresas dos setores imobiliário, gestão empresarial e jurídico para entregar sistemas que realmente geram valor: pipelines de automação, agentes conversacionais integrados e dashboards acionáveis.

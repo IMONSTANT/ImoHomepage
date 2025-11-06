@@ -65,14 +65,14 @@ export default function ImageModal({ isOpen, onClose }) {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="fixed inset-4 md:inset-8 lg:inset-12 z-50 flex flex-col items-center justify-center"
+            className="fixed inset-2 sm:inset-4 md:inset-8 lg:inset-12 z-50 flex flex-col items-center justify-center"
           >
             {/* Close button */}
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               onClick={onClose}
-              className="absolute top-4 right-4 z-10 p-2 rounded-full bg-neon text-black font-bold text-xl hover:bg-white"
+              className="absolute top-2 right-2 sm:top-4 sm:right-4 z-10 p-1.5 sm:p-2 rounded-full bg-neon text-black font-bold text-lg sm:text-xl hover:bg-white"
               aria-label="Fechar modal"
             >
               ✕
@@ -101,7 +101,7 @@ export default function ImageModal({ isOpen, onClose }) {
                 whileHover={{ scale: 1.15 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setCurrent((prev) => (prev - 1 + images.length) % images.length)}
-                className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-neon text-black font-bold text-2xl hover:bg-white z-10"
+                className="absolute left-1 sm:left-2 md:left-4 top-1/2 -translate-y-1/2 p-2 sm:p-2.5 md:p-3 rounded-full bg-neon text-black font-bold text-xl sm:text-2xl hover:bg-white z-10"
                 aria-label="Slide anterior"
               >
                 ‹
@@ -112,7 +112,7 @@ export default function ImageModal({ isOpen, onClose }) {
                 whileHover={{ scale: 1.15 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setCurrent((prev) => (prev + 1) % images.length)}
-                className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-neon text-black font-bold text-2xl hover:bg-white z-10"
+                className="absolute right-1 sm:right-2 md:right-4 top-1/2 -translate-y-1/2 p-2 sm:p-2.5 md:p-3 rounded-full bg-neon text-black font-bold text-xl sm:text-2xl hover:bg-white z-10"
                 aria-label="Próximo slide"
               >
                 ›
@@ -124,10 +124,10 @@ export default function ImageModal({ isOpen, onClose }) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4"
+              className="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 sm:gap-4"
             >
               {/* Dots */}
-              <div className="flex gap-2">
+              <div className="flex gap-1.5 sm:gap-2">
                 {images.map((_, i) => (
                   <motion.button
                     key={i}
@@ -143,7 +143,7 @@ export default function ImageModal({ isOpen, onClose }) {
               </div>
 
               {/* Counter */}
-              <div className="text-neon font-semibold text-sm">
+              <div className="text-neon font-semibold text-xs sm:text-sm">
                 {current + 1} / {images.length}
               </div>
 
