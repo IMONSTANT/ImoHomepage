@@ -32,7 +32,7 @@ export default function HeroSection(){
   return (
     <section id="home" className="min-h-[80vh] flex items-center pt-20 sm:pt-24 md:pt-28">
       <motion.div
-        className="max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center"
+        className="max-w-4xl mx-auto w-full"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -68,30 +68,6 @@ export default function HeroSection(){
             >
               Fale Conosco
             </motion.a>
-          </motion.div>
-        </motion.div>
-
-        <motion.div
-          variants={itemVariants}
-          whileInView={{ y: 0, opacity: 1 }}
-          initial={{ y: 20, opacity: 0 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-        >
-          {/* visual / espaço para demo card (CodeDemoCard is used elsewhere in Hero) */}
-          <motion.div
-            className="w-full h-48 sm:h-64 md:h-72 lg:h-80 card-neon rounded-xl p-4 md:p-6 flex items-center justify-center"
-            whileHover={{ boxShadow: '0 0 30px rgba(0, 255, 204, 0.2)' }}
-          >
-            <div className="text-center text-gray-300 px-4">
-              <motion.div
-                animate={{ y: [0, -5, 0] }}
-                transition={{ duration: 3, repeat: Infinity }}
-                className="text-base sm:text-lg font-semibold"
-              >
-                Demonstração ao vivo
-              </motion.div>
-              <div className="mt-2 text-xs sm:text-sm">Veja um agente integrado ao seu fluxo de trabalho — agende uma demo.</div>
-            </div>
           </motion.div>
         </motion.div>
       </motion.div>
